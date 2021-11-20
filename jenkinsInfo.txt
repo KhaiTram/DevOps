@@ -37,3 +37,17 @@ Dashboard → Zugangsdaten → Jenkins → Globale Zugangsdaten ausfüllen
 Beim erstellen des Projektes URL eingeben von Git 
 (Ssh-key einfügen – eigener Name, Einstellungen)
 Projekt bearbeiten – Credentials einfügen
+
+Cmd Jenkins 
+Jenkins verwalten → Globale Sicherheit konfigurieren
+Rechtevergabe habe ich jzt erstmal: „Jeder darf alle Aktionen ausführen“ Wenn es mehrere Benutzer gibt dann nur angemeldete Benutzer
+localhost:8080/cli/ besuchen (Auf der Seite stehen alle Befehle der JenkinsCLI)
+jenkins-cli.jar herunterladen
+in cmd einfügen → java -jar jenkins-cli.jar -s http://localhost:8080/ -webSocket help
+
+User einfügen /Rollen verteilen
+Jenkins Verwalten → Benutzer verwalten → Benutzer hinzufügen – Daten eingeben
+Role-based Authorization Strategy PlugIn 
+Jenkins Verwalten → Manage and Assign Roles → Manage Roles → Rollen hinzufügen 
+Jenkins Verwalten → Manage and Assign Roles →Assign Roles → Rollen verteilen
+
