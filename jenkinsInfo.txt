@@ -1,0 +1,39 @@
+Was ist Jenkins ?
+Kontinuierliches Integrations-Tool
+Fordert Einsatz/Tests/Entwicklung von neu erstelltem Code
+Pros – spart mehr Zeit, steigert Produktivität, verbessert Kommunikation.
+
+Der Ablauf von Jenkins
+Der Entwickler erstellt einen Code und lädt ihn ins Repository hoch. Der veränderte Code wird in den Server „gezogen“ und erst wenn der Server(hat dann ja eingebaute Tests) keine Fehler im Code findet, wird der Code an den Tester weitergeleitet, der wiederrum testet. Findet der Tester einen Fehler, dann wird der Code wieder an den Entwickler geschickt. Ist der ode jedoch Fehlerfrei, kann mit diesem weitergearbeitet werden.
+Findet der Server jedoch doch einen Fehler, dann wird der Code wieder an den Entwickler geschickt.
+
+Installation
+Programmdownload über → Jenkins 
+LTS Version downloaden
+Tutorial zum Download ansonsten unten weitermachen → Jenkins installation on Windows 10 | How to install Jenkins CI on Windows 10 - YouTube 
+„Run service as LocalSystem“ anklicken
+Standardmäßig läuft Ihr Jenkins mit https://localhost:8080/. Dies kann durch Bearbeiten geändert werden, das sich in Ihrem Installationsverzeichnis befindet. Diese Datei ist auch der Ort, um andere Boot-Konfigurationsparameter wie JVM-Optionen, HTTPS-Setup usw. zu ändern. jenkins.xml 
+Java1.8 oder 11 benötigt 
+Java Downloads | Orakel (oracle.com) 
+Anleitung → Java installieren auf Windows 10 - YouTube 
+Localhost:8080 in Webbrowser
+Verzeichnis wird angezeigt, auf Laptop Datei „InitialAdminPassword“ öffen und Code auf 8080 einfügen.
+Auswahl, welche PlugIns installiert werden soll
+Sollte man nicht alle PlugIns suchen können, können diese über die erweiterte Einstellungen hochgeladen werden.
+
+Die wichtigsten PlugIns, die Jenkins benötigt
+Git
+Pipeline
+ssh ?
+
+Das erste Projekt erstellen
+Element anlegen
+Einstellungen machen 
+Build-Trigger kann jederzeit verändert werden. Brauchen wir den ? Ausgelassen
+Brauchen wir manuelle Pipelines → wenn ja, bei Build-Auslöser & + bei BuildWarteschlange? Frage
+
+Git-Anbindung
+Dashboard → Zugangsdaten → Jenkins → Globale Zugangsdaten ausfüllen
+Beim erstellen des Projektes URL eingeben von Git 
+(Ssh-key einfügen – eigener Name, Einstellungen)
+Projekt bearbeiten – Credentials einfügen
