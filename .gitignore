@@ -41,3 +41,18 @@ testem.log
 .DS_Store
 Thumbs.db
 *.iml
+
+target/*
+.settings/*
+.classpath
+.project
+.idea
+*.iml
+/target
+
+generated/
+
+# Easier branch switching
+springboot-petclinic-client/
+springboot-petclinic-server/
+
