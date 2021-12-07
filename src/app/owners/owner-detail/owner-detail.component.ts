@@ -58,5 +58,9 @@ export class OwnerDetailComponent implements OnInit {
     this.router.navigate(['/owners', owner.id, 'pets', 'add']);
   }
 
+  deleteOwn() {
+    this.ownerService.deleteOwner;
+  }
+
 
 }

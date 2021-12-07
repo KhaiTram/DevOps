@@ -13,7 +13,7 @@ import org.hibernate.validator.constraints.*;
  * A pet type.
  */
 @ApiModel(description = "A pet type.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-11-24T22:12:37.826865100+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-12-07T17:03:01.073859+01:00[Europe/Berlin]")
 public class PetTypeDto   {
   @JsonProperty("id")
   private Integer id;
