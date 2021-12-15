@@ -18,7 +18,11 @@ import org.hibernate.validator.constraints.*;
  * A pet owner.
  */
 @ApiModel(description = "A pet owner.")
+<<<<<<< Updated upstream
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-12-07T17:03:01.073859+01:00[Europe/Berlin]")
+=======
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-12-12T09:11:45.298002900+01:00[Europe/Berlin]")
+>>>>>>> Stashed changes
 public class OwnerDto   {
   @JsonProperty("firstName")
   private String firstName;

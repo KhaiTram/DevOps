@@ -34,6 +34,7 @@ import {Owner} from '../owner';
 export class OwnerDetailComponent implements OnInit {
   errorMessage: string;
   owner: Owner;
+  deleteSuccess = false;
 
   constructor(private route: ActivatedRoute, private router: Router, private ownerService: OwnerService) {
     this.owner = {} as Owner;
@@ -58,8 +59,18 @@ export class OwnerDetailComponent implements OnInit {
     this.router.navigate(['/owners', owner.id, 'pets', 'add']);
   }
 
+<<<<<<< Updated upstream
   deleteOwn() {
     this.ownerService.deleteOwner;
+=======
+  deleteOwner(owner: Owner) {
+    this.ownerService.deleteOwner(owner.id.toString()).subscribe(
+      response => {
+        this.deleteSuccess = true;
+        this.owner = {} as Owner;
+      },
+      error => this.errorMessage = error as any);
+>>>>>>> Stashed changes
   }
 
 

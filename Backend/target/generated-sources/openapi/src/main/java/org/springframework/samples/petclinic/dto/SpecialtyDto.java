@@ -13,7 +13,11 @@ import org.hibernate.validator.constraints.*;
  * Fields of specialty of vets.
  */
 @ApiModel(description = "Fields of specialty of vets.")
+<<<<<<< Updated upstream
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-12-07T17:03:01.073859+01:00[Europe/Berlin]")
+=======
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-12-12T09:11:45.298002900+01:00[Europe/Berlin]")
+>>>>>>> Stashed changes
 public class SpecialtyDto   {
   @JsonProperty("id")
   private Integer id;
