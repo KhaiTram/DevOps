@@ -30,4 +30,5 @@ export interface Owner {
   city: string;
   telephone: string;
   pets: Pet[];
+  gender: string;
 }
