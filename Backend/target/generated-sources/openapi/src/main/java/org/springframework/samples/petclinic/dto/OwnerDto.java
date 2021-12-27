@@ -18,7 +18,7 @@ import org.hibernate.validator.constraints.*;
  * A pet owner.
  */
 @ApiModel(description = "A pet owner.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-12-15T15:07:35.086524900+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-12-27T13:36:42.507895900+01:00[Europe/Berlin]")
 public class OwnerDto   {
   @JsonProperty("firstName")
   private String firstName;
