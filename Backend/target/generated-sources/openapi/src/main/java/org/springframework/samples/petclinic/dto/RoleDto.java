@@ -13,7 +13,7 @@ import org.hibernate.validator.constraints.*;
  * A role.
  */
 @ApiModel(description = "A role.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-12-07T17:03:01.073859+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-12-27T13:36:42.507895900+01:00[Europe/Berlin]")
 public class RoleDto   {
   @JsonProperty("name")
   private String name;

@@ -20,6 +20,7 @@
  * @author Vitaliy Fedoriv
  */
 
+import { Vet } from 'app/vets/vet';
 import {Pet} from '../pets/pet';
 
 export interface Visit {
@@ -27,5 +28,5 @@ export interface Visit {
   date: string;
   description: string;
   pet: Pet;
-
+  vet: Vet;
 }

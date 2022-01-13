@@ -16,7 +16,7 @@ import org.hibernate.validator.constraints.*;
  * A booking for a vet visit.
  */
 @ApiModel(description = "A booking for a vet visit.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-12-07T17:03:01.073859+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-12-27T13:36:42.507895900+01:00[Europe/Berlin]")
 public class VisitDto   {
   @JsonProperty("date")
   @org.springframework.format.annotation.DateTimeFormat(iso = org.springframework.format.annotation.DateTimeFormat.ISO.DATE)
