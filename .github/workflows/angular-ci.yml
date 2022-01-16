@@ -1,9 +1,11 @@
 name: Angular GitHub CI
-
-on: push
+on:
+  push:
+    branches:
+      - Backup
 
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
 
     strategy:
@@ -31,20 +33,13 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-            
       - name: Install Dependencies
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: |
           npm ci
-          
       - name: Build
         run: |
           npm run build -- --prod
-          
       - name: Lint
         run: |
           npm run lint
-          
-      - name: Test
-        run: |
-          npm run test -- --prod
