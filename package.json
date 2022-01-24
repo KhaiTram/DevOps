@@ -10,7 +10,7 @@
     "test-headless": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng deploy --base-href=/github.com/KhaiTram/DevOps/ --no-silent"
+    "deploy": "ng deploy --base-href=/github.com/DevOps/ --no-silent"
   },
   "private": true,
   "dependencies": {
