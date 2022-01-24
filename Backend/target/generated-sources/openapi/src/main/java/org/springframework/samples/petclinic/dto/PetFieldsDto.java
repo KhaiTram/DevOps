@@ -14,7 +14,7 @@ import org.hibernate.validator.constraints.*;
  * Editable fields of a pet.
  */
 @ApiModel(description = "Editable fields of a pet.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-12-27T13:36:42.507895900+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-01-24T17:20:14.407598+07:00[Asia/Bangkok]")
 public class PetFieldsDto   {
   @JsonProperty("name")
   private String name;
@@ -56,7 +56,7 @@ public class PetFieldsDto   {
    * The date of birth of the pet.
    * @return birthDate
   */
-  @ApiModelProperty(example = "Tue Sep 07 02:00:00 CEST 2010", value = "The date of birth of the pet.")
+  @ApiModelProperty(example = "Tue Sep 07 07:00:00 ICT 2010", value = "The date of birth of the pet.")
 
   @Valid
 
