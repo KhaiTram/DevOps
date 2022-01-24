@@ -1,4 +1,4 @@
-name: Angular GitHub CI/CD
+name: Angular GitHub CI
 on:
   push:
     branches:
