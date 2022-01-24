@@ -45,12 +45,13 @@ jobs:
       - name: Lint
         run: |
           npm run lint
-#test
-    #  - name: Test
-    #    run: |
+          
+      - name: Test
+        run: |
+         ng test 
     #      npm run test -- --prod
     #      npm run test
-    #      ng test
+    
       - name: Conventional Changelog Action
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3
