@@ -47,8 +47,8 @@ jobs:
         run: |
           npm run lint
           
-      - name: Test 🚨
-        run: npm test      
+     # - name: Test 🚨
+      #  run: npm test      
     
       - name: Conventional Changelog Action
         id: changelog
