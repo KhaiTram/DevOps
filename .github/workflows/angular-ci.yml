@@ -64,10 +64,6 @@ jobs:
           release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
 
-      - name: no silent
-        run: |
-          ngh --no-silent
-
       - name: Deploy
         run: |
           npm run deploy
