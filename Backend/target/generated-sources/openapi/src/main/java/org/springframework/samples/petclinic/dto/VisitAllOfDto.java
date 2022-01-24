@@ -12,7 +12,7 @@ import org.hibernate.validator.constraints.*;
 /**
  * VisitAllOfDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-01-24T17:20:14.407598+07:00[Asia/Bangkok]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-01-24T17:27:44.251950+07:00[Asia/Bangkok]")
 public class VisitAllOfDto   {
   @JsonProperty("id")
   private Integer id;

@@ -15,7 +15,7 @@ import org.hibernate.validator.constraints.*;
  * Messages describing a validation error.
  */
 @ApiModel(description = "Messages describing a validation error.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-01-24T17:20:14.407598+07:00[Asia/Bangkok]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-01-24T17:27:44.251950+07:00[Asia/Bangkok]")
 public class ValidationMessageDto extends HashMap<String, Object>  {
   @JsonProperty("message")
   private String message;
