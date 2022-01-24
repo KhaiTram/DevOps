@@ -35,10 +35,9 @@ jobs:
             ${{ runner.os }}-
             
       - name: Install Dependencies
-      #  if: steps.cache-nodemodules.outputs.cache-hit != 'true'
+        if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: |
-          npm install -g angular-cli
-        #  npm ci
+          npm ci
           
       - name: Build
         run: |
@@ -47,11 +46,6 @@ jobs:
       - name: Lint
         run: |
           npm run lint
-          
-      - name: Test
-        run: |
-          ng test
-         # npm run test -- --prod
           
       - name: Conventional Changelog Action
         id: changelog
