@@ -34,19 +34,22 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
             
-      - name: Install Dependencies
+      - name: Install Dependencies 🔧
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: |
           npm ci
           
-      - name: Build
+      - name: Build 🏗️
         run: |
           npm run build -- --prod
           
-      - name: Lint
+      - name: Lint 🧐
         run: |
           npm run lint
           
+      - name: Test 🚨
+        run: npm test      
+    
       - name: Conventional Changelog Action
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3
@@ -74,6 +77,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: public
           
-      - name: deployen
+      - name: deployen  🚀
         run: |
           npm run deploy
