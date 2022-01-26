@@ -67,7 +67,7 @@ jobs:
           release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
 
-     # - name: Deploy
+     # - name: Deploy 🚀
       #  run: |
        #   npm run deploy
        
@@ -76,7 +76,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: public
-          
-      - name: deployen  🚀
-        run: |
-          npm run deploy
