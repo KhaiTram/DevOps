@@ -41,7 +41,6 @@ jobs:
           
       - name: Build 🏗️
         run: |
-         mvnw spring-boot:run
          npm run build -- --prod
           
       - name: Lint 🧐
