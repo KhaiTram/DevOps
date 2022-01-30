@@ -21,9 +21,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
             
       - name: Install Dependencies 🔧
-        if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: |
           npm ci
+          npm install
           
       - name: Build 🏗️
         run: |
@@ -36,15 +36,12 @@ jobs:
      # - name: Test 🚨
       #  run: npm test      
 
-      - name: Deploy to netlify
-        uses: netlify/actions/cli@master
+      - name: Deploy to netlify 🚀
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        with:
-          args: deploy --dir=build --prod
-          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
-
-     # - name: Deploy 🚀
-      #  run: |
-       #   npm run deploy
+          RUN_ID: ${{ github.run_id }}
+          CURR_BRANCH: ${{ steps.curr_branch.outputs.branch  }}
+        shell: bash
+        run: netlify deploy --dir=dist --prod --auth $NETLIFY_AUTH_TOKEN --message="GitHub action deploy $RUN_ID on $CURR_BRANCH"
+   
