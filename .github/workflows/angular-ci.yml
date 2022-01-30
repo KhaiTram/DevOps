@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - Backup
+ 
+  pull_request:
+    branches:
+      - backup
 
 jobs:
   ci:
