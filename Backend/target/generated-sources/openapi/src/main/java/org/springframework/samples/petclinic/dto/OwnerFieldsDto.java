@@ -13,7 +13,7 @@ import org.hibernate.validator.constraints.*;
  * Editable fields of a pet owner.
  */
 @ApiModel(description = "Editable fields of a pet owner.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-12-27T13:36:42.507895900+01:00[Europe/Berlin]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-02-05T08:16:48.319707800+01:00[Europe/Berlin]")
 public class OwnerFieldsDto   {
   @JsonProperty("firstName")
   private String firstName;
