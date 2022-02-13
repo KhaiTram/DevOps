@@ -33,6 +33,7 @@ import {ActivatedRouteStub, RouterStub} from '../../testing/router-stubs';
 import {Visit} from '../visit';
 import {Observable, of} from 'rxjs';
 import {Pet} from '../../pets/pet';
+import {Vet} from '../../vets/vet';
 import {MatMomentDateModule} from '@angular/material-moment-adapter';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import Spy = jasmine.Spy;
@@ -49,6 +50,7 @@ describe('VisitEditComponent', () => {
   let visitService: VisitService;
   let testVisit: Visit;
   let testPet: Pet;
+  let testVet: Vet;
   let spy: Spy;
 
   beforeEach(waitForAsync(() => {
@@ -68,6 +70,15 @@ describe('VisitEditComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(VisitEditComponent);
     component = fixture.componentInstance;
+    testVet = {
+      id: 1,
+      firstName: 'Bob',
+      lastName: 'Jenkins',
+      specialties: [{
+        id: 1,
+        name: 'test'
+      }]
+    }
     testPet = {
       id: 1,
       name: 'Leo',
@@ -88,7 +99,8 @@ describe('VisitEditComponent', () => {
       id: 1,
       date: '2016-09-07',
       description: '',
-      pet: testPet
+      pet: testPet,
+      vet: testVet,
     };
 
     visitService = fixture.debugElement.injector.get(VisitService);

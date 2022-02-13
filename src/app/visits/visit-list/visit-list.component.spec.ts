@@ -32,8 +32,10 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {ActivatedRouteStub, RouterStub} from '../../testing/router-stubs';
 import {Visit} from '../visit';
 import {Pet} from '../../pets/pet';
+import {Vet} from '../../vets/vet';
 import {Observable, of} from 'rxjs';
 import Spy = jasmine.Spy;
+
 
 class VisitServiceStub {
   deleteVisit(visitId: string): Observable<number> {
@@ -47,6 +49,7 @@ describe('VisitListComponent', () => {
   let visitService: VisitService;
   let testVisits: Visit[];
   let testPet: Pet;
+  let testVet: Vet;
   let spy: Spy;
   let responseStatus: number;
 
@@ -67,6 +70,15 @@ describe('VisitListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(VisitListComponent);
     component = fixture.componentInstance;
+    testVet = {
+      id: 1,
+      firstName: 'Bob',
+      lastName: 'Jenkins',
+      specialties: [{
+        id: 1,
+        name: 'test'
+      }]
+    }
     testPet = {
       id: 1,
       name: 'Leo',
@@ -87,7 +99,8 @@ describe('VisitListComponent', () => {
       id: 1,
       date: '2016-09-07',
       description: '',
-      pet: testPet
+      pet: testPet,
+      vet: testVet,
     }];
 
     visitService = fixture.debugElement.injector.get(VisitService);

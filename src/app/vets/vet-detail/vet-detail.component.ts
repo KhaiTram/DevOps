@@ -34,6 +34,7 @@ import {Vet} from '../vet';
 export class VetDetailComponent implements OnInit {
   errorMessage: string;
   vet: Vet;
+  deleteSuccess = false;
 
   constructor(private route: ActivatedRoute, private router: Router, private vetService: VetService) {
     this.vet = {} as Vet;
@@ -49,11 +50,6 @@ export class VetDetailComponent implements OnInit {
   gotoVetsList() {
     this.router.navigate(['/vets']);
   }
-
-
-
-
-
 
   deleteVet(vet: Vet) {
     this.vetService.deleteVet(vet.id.toString()).subscribe(
