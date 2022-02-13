@@ -78,7 +78,7 @@ describe('VisitListComponent', () => {
         id: 1,
         name: 'test'
       }]
-    }
+    };
     testPet = {
       id: 1,
       name: 'Leo',

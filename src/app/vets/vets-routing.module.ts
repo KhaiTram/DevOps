@@ -32,7 +32,7 @@ import {SpecResolver} from '../specialties/spec-resolver';
 const vetRoutes: Routes = [
   {path: 'vets', component: VetListComponent},
   {path: 'vets/add', component: VetAddComponent},
-  {path: 'vets/visit', component: VetVisitComponent},
+  {path: 'vets/visit/:vet_id', component: VetVisitComponent},
   {path: 'vets/:id/edit', component: VetEditComponent, resolve: {vet: VetResolver, specs: SpecResolver}}
 ];
 
