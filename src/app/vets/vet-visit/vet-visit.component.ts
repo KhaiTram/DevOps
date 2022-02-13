@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Visit} from '../../visits/visit';
 import {Vet} from '../vet';
-import {ActivatedRoute,Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {VetService} from '../vet.service';
 import { VisitService } from 'app/visits/visit.service';
 
@@ -13,10 +13,8 @@ import { VisitService } from 'app/visits/visit.service';
 export class VetVisitComponent implements OnInit {
   errorMessage: string;
   visits: Visit[];
-  
 
   constructor(private route: ActivatedRoute, private router: Router, private vetService: VetService) { 
-
   }
 
   ngOnInit() {
