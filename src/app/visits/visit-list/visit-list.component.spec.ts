@@ -34,6 +34,7 @@ import {Visit} from '../visit';
 import {Pet} from '../../pets/pet';
 import {Observable, of} from 'rxjs';
 import Spy = jasmine.Spy;
+import { Vet } from 'app/vets/vet';
 
 class VisitServiceStub {
   deleteVisit(visitId: string): Observable<number> {
@@ -47,6 +48,7 @@ describe('VisitListComponent', () => {
   let visitService: VisitService;
   let testVisits: Visit[];
   let testPet: Pet;
+  let testVet: Vet;
   let spy: Spy;
   let responseStatus: number;
 
@@ -87,7 +89,8 @@ describe('VisitListComponent', () => {
       id: 1,
       date: '2016-09-07',
       description: '',
-      pet: testPet
+      pet: testPet,
+      vet: testVet
     }];
 
     visitService = fixture.debugElement.injector.get(VisitService);

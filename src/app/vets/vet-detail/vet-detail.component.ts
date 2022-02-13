@@ -34,6 +34,7 @@ import {Vet} from '../vet';
 export class VetDetailComponent implements OnInit {
   errorMessage: string;
   vet: Vet;
+  deleteSuccess: boolean;
 
   constructor(private route: ActivatedRoute, private router: Router, private vetService: VetService) {
     this.vet = {} as Vet;

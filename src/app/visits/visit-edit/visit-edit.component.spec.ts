@@ -36,6 +36,7 @@ import {Pet} from '../../pets/pet';
 import {MatMomentDateModule} from '@angular/material-moment-adapter';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import Spy = jasmine.Spy;
+import { Vet } from 'app/vets/vet';
 
 class VisitServiceStub {
   getVisitById(visitId: string): Observable<Visit> {
@@ -49,6 +50,7 @@ describe('VisitEditComponent', () => {
   let visitService: VisitService;
   let testVisit: Visit;
   let testPet: Pet;
+  let testVet: Vet;
   let spy: Spy;
 
   beforeEach(waitForAsync(() => {
@@ -88,7 +90,8 @@ describe('VisitEditComponent', () => {
       id: 1,
       date: '2016-09-07',
       description: '',
-      pet: testPet
+      pet: testPet,
+      vet: testVet
     };
 
     visitService = fixture.debugElement.injector.get(VisitService);
