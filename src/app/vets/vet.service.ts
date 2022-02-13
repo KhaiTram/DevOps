@@ -55,13 +55,13 @@ export class VetService {
         catchError(this.handlerError('getVetById', {} as Vet))
       );
   }
-   
+  
   getVisitByVetId(vetId: string): Observable<Visit[]> {
     return this.http.get<Visit[]>(this.entityVisitUrl + '/vet/' + vetId)
       .pipe(
         catchError(this.handlerError('getVisitByVetId', [] as Visit[] ))
       );
-  } 
+  }
 
   updateVet(vetId: string, vet: Vet): Observable<Vet> {
     return this.http.put<Vet>(this.entityUrl + '/' + vetId, vet)

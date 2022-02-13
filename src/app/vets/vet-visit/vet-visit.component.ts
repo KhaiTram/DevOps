@@ -14,14 +14,13 @@ export class VetVisitComponent implements OnInit {
   errorMessage: string;
   visits: Visit[];
 
-  constructor(private route: ActivatedRoute, private router: Router, private vetService: VetService) { 
-  }
+  constructor(private route: ActivatedRoute, private router: Router, private vetService: VetService) {}
 
   ngOnInit() {
     const vetId = this.route.snapshot.params.id;
     this.vetService.getVisitByVetId(vetId).subscribe(
       visits => this.visits = visits,
-      error => this.errorMessage =error as any
+      error => this.errorMessage = error as any
       );
     console.log(this.visits);
   }
