@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Visit} from '../../visits/visit';
-import {VisitService} from 'app/visits/visit.service';
 import {Vet} from '../vet';
-import {Router} from '@angular/router';
+import {ActivatedRoute,Router} from '@angular/router';
 import {VetService} from '../vet.service';
+import { VisitService } from 'app/visits/visit.service';
 
 @Component({
   selector: 'app-vet-visit',
@@ -11,10 +11,21 @@ import {VetService} from '../vet.service';
   styleUrls: ['./vet-visit.component.css']
 })
 export class VetVisitComponent implements OnInit {
+  errorMessage: string;
+  visits: Visit[];
+  
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private router: Router, private vetService: VetService) { 
 
-  ngOnInit(): void {
+  }
+
+  ngOnInit() {
+    const vetId = this.route.snapshot.params.id;
+    this.vetService.getVisitByVetId(vetId).subscribe(
+      visits => this.visits = visits,
+      error => this.errorMessage =error as any
+      );
+    console.log(this.visits);
   }
 
 }

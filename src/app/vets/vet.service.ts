@@ -24,6 +24,7 @@ import {Injectable} from '@angular/core';
 import {environment} from '../../environments/environment';
 import {Observable} from 'rxjs';
 import {Vet} from './vet';
+import {Visit} from '../visits/visit';
 import {HttpClient} from '@angular/common/http';
 import {HandleError, HttpErrorHandler} from '../error.service';
 import {catchError} from 'rxjs/internal/operators';
@@ -33,6 +34,7 @@ import {catchError} from 'rxjs/internal/operators';
 export class VetService {
 
   entityUrl = environment.REST_API_URL + 'vets';
+  entityVisitUrl = environment.REST_API_URL + 'visit';
 
   private readonly handlerError: HandleError;
 
@@ -53,6 +55,13 @@ export class VetService {
         catchError(this.handlerError('getVetById', {} as Vet))
       );
   }
+   
+  getVisitByVetId(vetId: string): Observable<Visit[]> {
+    return this.http.get<Visit[]>(this.entityVisitUrl + '/vet/' + vetId)
+      .pipe(
+        catchError(this.handlerError('getVisitByVetId', [] as Visit[] ))
+      );
+  } 
 
   updateVet(vetId: string, vet: Vet): Observable<Vet> {
     return this.http.put<Vet>(this.entityUrl + '/' + vetId, vet)

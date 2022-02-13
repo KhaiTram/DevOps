@@ -54,8 +54,8 @@ export class VetListComponent implements OnInit {
       error => this.errorMessage = error as any);
   }
 
-  showVisits(vet: Vet) {
-    this.router.navigate(['/vets/visit']);
+  onSelect(vet: Vet) {
+    this.router.navigate(['/vets/visit', vet.id]);
   }
 
   gotoHome() {

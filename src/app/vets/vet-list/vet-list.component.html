@@ -41,7 +41,8 @@
           </div>
         </td>
         <td>
-          <button class="btn btn-default" (click)="showVisits(vet)">show Visits</button>
+          <a class="btn btn-default" routerLink="/vets/visits/{{owner.id}}" routerLinkActive="active"
+          (click)="onSelect(vet)">show Visits</a>
           <button class="btn btn-default" (click)="editVet(vet)">Edit Vet</button>
           <button class="btn btn-default" (click)="deleteVet(vet)">Delete Vet</button>
         </td>
