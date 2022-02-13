@@ -44,10 +44,12 @@ export class OwnerListComponent implements OnInit {
     this.ownerService.getOwners().subscribe(
       owners => this.owners = owners,
       error => this.errorMessage = error as any);
+      
   }
 
   onSelect(owner: Owner) {
     this.router.navigate(['/owners', owner.id]);
+    console.log(this.owners);
   }
 
   addOwner() {

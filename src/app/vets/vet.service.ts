@@ -34,7 +34,7 @@ import {catchError} from 'rxjs/internal/operators';
 export class VetService {
 
   entityUrl = environment.REST_API_URL + 'vets';
-  entityVisitUrl = environment.REST_API_URL + 'visit';
+  entityVisitUrl = environment.REST_API_URL + 'visits';
 
   private readonly handlerError: HandleError;
 

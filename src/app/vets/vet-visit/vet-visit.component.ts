@@ -3,7 +3,7 @@ import {Visit} from '../../visits/visit';
 import {Vet} from '../vet';
 import {ActivatedRoute, Router} from '@angular/router';
 import {VetService} from '../vet.service';
-import { VisitService } from 'app/visits/visit.service';
+
 
 @Component({
   selector: 'app-vet-visit',
@@ -22,7 +22,10 @@ export class VetVisitComponent implements OnInit {
       visits => this.visits = visits,
       error => this.errorMessage = error as any
       );
-    console.log(this.visits);
+  }
+
+  onNavBack(){
+    this.router.navigate(['/vets']);
   }
 
 }
