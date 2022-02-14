@@ -22,6 +22,12 @@
  */
 
 import {Component, OnInit} from '@angular/core';
+import {OwnerService} from '../../owners/owner.service';
+import {Owner} from '../../owners/owner';
+import {PetService} from '../../pets/pet.service';
+import {Pet} from '../../pets/pet';
+import {VisitService} from '../../visits/visit.service';
+import {Visit} from '../../visits/visit';
 
 @Component({
   selector: 'app-welcome',
@@ -29,11 +35,62 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
+  errorMessage: string;
+  searchTerm: string;
+  owners: Owner[];
+  pets: Pet[];
+  visits: Visit[];
+  searchedList: string[];
+  allList: string[];
 
-  constructor() {
+  constructor(private ownerService: OwnerService, private petService: PetService, private visitService: VisitService) {
   }
 
   ngOnInit() {
+    this.ownerService.getOwners().subscribe(
+      owners => this.owners = owners,
+      error => this.errorMessage = error as any);
+    this.petService.getPets().subscribe(
+      pets => this.pets = pets,
+      error => this.errorMessage = error as any);
+    this.visitService.getVisits().subscribe(
+      visits => this.visits = visits,
+      error => this.errorMessage = error as any);
+  }
+
+  search(){
+    this.loadlist();
+    setTimeout(() => {
+      this.searchWords()
+    }, 10)
+
+    
+  }
+
+  searchWords(){
+    this.searchedList = [];
+    for (let word of this.allList){
+      if(word.includes(this.searchTerm))
+      {
+        this.searchedList.push(word);
+      }
+    }
+    console.log(this.searchedList);
+  }
+
+  loadlist(){
+    this.allList = [];
+    for (let owner of this.owners) {
+      this.allList.push(owner.lastName);
+    }
+    for (let pet of this.pets) {
+      this.allList.push(pet.name);
+    }
+    for (let visit of this.visits) {
+      this.allList.push(visit.description);
+    }
+
+    
   }
 
 }
