@@ -25,7 +25,7 @@ jobs:
         run: |
           npm ci
           
-      - name: Build 🏗️ and Test 🚨
+      - name: Build 🏗️ 
         run: |
          npm run build -- --prod
           
