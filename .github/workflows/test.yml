@@ -21,4 +21,4 @@ jobs:
           npm ci
           
       - name: Test 🚨
-        run: npm test      
+        run: ng test      
