@@ -29,9 +29,10 @@ jobs:
         run: |
          npm run build -- --prod
           
-      - name: Lint 🧐
-        run: |
-          npm run lint   
+          #dauert zu lange 
+     # - name: Lint 🧐
+      #  run: |
+       #   npm run lint   
 
       - name: Deploy to netlify 🚀
         uses: netlify/actions/cli@master
