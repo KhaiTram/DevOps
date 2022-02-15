@@ -53,6 +53,7 @@ export class VisitService {
       );
   }
 
+
   addVisit(visit: Visit): Observable<Visit> {
     return this.http.post<Visit>(this.entityUrl, visit)
       .pipe(
@@ -74,6 +75,4 @@ export class VisitService {
       );
 
   }
-
-
 }

@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="container xd-container">
+      
+      <h2>Visits</h2>
+  
+      <div class="table-responsive" id="visitsTable"  *ngIf="visits">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>date</th>
+            <th>description</th>
+          </tr>
+          </thead>
+  
+          <tbody>
+          <tr *ngFor="let visit of visits">
+            <td>{{ visit.date }}</td>
+            <td>{{ visit.description }}</td>
+            <td>
+          
+          </td>
+          </tr>
+          </tbody>
+        </table> 
+
+        <button class="btn btn-default" (click)="onNavBack()">Back</button>
+        
+      </div>
+    </div>
+  </div>
+  

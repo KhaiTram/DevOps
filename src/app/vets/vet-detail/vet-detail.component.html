@@ -19,32 +19,24 @@
 <div class="container-fluid">
   <div class="container xd-container">
 
-    <h2>Owner Information</h2>
+    <h2>Vet Information</h2>
+
 
     <table class="table table-striped">
       <tr>
         <th>Name</th>
         <td><b>{{ owner.firstName }} {{ owner.lastName }}</b></td>
       </tr>
-      <tr>
-        <th>Address</th>
-        <td>{{ owner.address }}</td>
-      </tr>
-      <tr>
-        <th>City</th>
-        <td>{{ owner.city }}</td>
-      </tr>
-      <tr>
-        <th>Telephone</th>
-        <td>{{ owner.telephone }}</td>
-      </tr>
+      
     </table>
 
-    <button class="btn btn-default" (click)="gotoOwnersList()"> Back</button>
-    <button class="btn btn-default" (click)="editOwner()">Edit Owner</button>
-    <button class="btn btn-default" (click)="addPet(owner)">Add New Pet</button>
+    <button class="btn btn-default" (click)="gotoVetsList()"> Back</button>
+    <button class="btn btn-default" (click)="editVet()">Edit Vet</button>
+    <button class="btn btn-default" (click)="addPet(vet)">Add New Pet</button>
 
-    <button class="btn btn-default" (click)="deleteOwner(owner)">Delete Owner</button>
+
+    <button class="btn btn-default" (click)="deleteVet(vet)">Delete Vet</button>
+
 
     <br/>
     <br/>
@@ -53,7 +45,7 @@
 
     <table class="table table-striped">
       <tr>
-        <app-pet-list *ngFor="let pet of owner.pets" [pet]="pet"></app-pet-list>
+        <app-pet-list *ngFor="let pet of vet.pets" [pet]="pet"></app-pet-list>
       </tr>
     </table>
   </div>

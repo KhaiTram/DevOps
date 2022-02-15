@@ -59,10 +59,6 @@ export class OwnerDetailComponent implements OnInit {
     this.router.navigate(['/owners', owner.id, 'pets', 'add']);
   }
 
-<<<<<<< Updated upstream
-  deleteOwn() {
-    this.ownerService.deleteOwner;
-=======
   deleteOwner(owner: Owner) {
     this.ownerService.deleteOwner(owner.id.toString()).subscribe(
       response => {
@@ -70,7 +66,7 @@ export class OwnerDetailComponent implements OnInit {
         this.owner = {} as Owner;
       },
       error => this.errorMessage = error as any);
->>>>>>> Stashed changes
+
   }
 
 

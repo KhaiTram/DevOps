@@ -25,33 +25,32 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
-import {OwnerDetailComponent} from './owner-detail.component';
+import {VetDetailComponent} from './vet-detail.component';
 import {FormsModule} from '@angular/forms';
 import {RouterTestingModule} from '@angular/router/testing';
-import {OwnerService} from '../owner.service';
+import {VetService} from '../vet.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ActivatedRouteStub, RouterStub} from '../../testing/router-stubs';
-import {Owner} from '../owner';
+import {Vet} from '../vet';
 import {Observable, of} from 'rxjs';
 
-class OwnserServiceStub {
-  getOwnerById(): Observable<Owner> {
-    return of( { id: 1, firstName: 'James' } as Owner );
+class VetServiceStub {
+  getVetById(): Observable<Vet> {
+    return of( { id: 1, firstName: 'James' } as Vet );
   }
 }
 
-describe('OwnerDetailComponent', () => {
-  let component: OwnerDetailComponent;
-  let fixture: ComponentFixture<OwnerDetailComponent>;
-  let testOwners: Owner[];
-  
+describe('VetDetailComponent', () => {
+  let component: VetDetailComponent;
+  let fixture: ComponentFixture<VetDetailComponent>;
+
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [OwnerDetailComponent],
+      declarations: [VetDetailComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [FormsModule, RouterTestingModule],
       providers: [
-        {provide: OwnerService, useClass: OwnserServiceStub},
+        {provide: VetService, useClass: VetServiceStub},
         {provide: Router, useClass: RouterStub},
         {provide: ActivatedRoute, useClass: ActivatedRouteStub}
       ]
@@ -60,40 +59,12 @@ describe('OwnerDetailComponent', () => {
   }));
 
   beforeEach(() => {
-    testOwners = [{
-      id: 1,
-      firstName: 'George',
-      lastName: 'Franklin',
-      address: '110 W. Liberty St.',
-      city: 'Madison',
-      telephone: '6085551023',
-      pets: [{
-        id: 1,
-        name: 'Leo',
-        birthDate: '2010-09-07',
-        type: {id: 1, name: 'cat'},
-        owner: null,
-        visits: null
-      }]
-    }];
-  });
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(OwnerDetailComponent);
+    fixture = TestBed.createComponent(VetDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create OwnerDetailComponent', () => {
+/*   it('should create VetDetailComponent', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('should create testuser', () => {
-    expect(testOwners[0]).toBeTruthy();
-  });
-
-  it('should Delete testuser', () => {
-    expect(testOwners[0]).toBeTruthy();
-  });
-
+  }); */
 });
