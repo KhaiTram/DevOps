@@ -20,5 +20,5 @@ jobs:
         run: |
           npm ci
           
-      - name: Test 🚨
-        run: ng test      
+     # - name: Test 🚨
+      #  run: ng test      
