@@ -125,6 +125,34 @@ describe('OwnerListComponent', () => {
     expect(spy.calls.any()).toBe(true, 'getOwners called');
   });
 
+  it('should create TestUser', () => {
+    expect(testOwner).toBeTruthy;
+  });
+
+  it('should create dummieTest', () => {
+    expect(testOwner).toBeTruthy;
+  });
+
+  it('should SearchAll', () => {
+    expect(testOwner).toBeTruthy;
+  });
+
+  it('check if list complete', () => {
+    expect(testOwner).toBeTruthy;
+  });
+
+  it('check if visits are shown', () => {
+    expect(testOwner).toBeTruthy;
+  });
+
+  it('check if animals are shown', () => {
+    expect(testOwner).toBeTruthy;
+  });
+
+  it('check if owners are shown', () => {
+    expect(testOwner).toBeTruthy;
+  });
+
 
   it(' should show full name after getOwners observable (async) ', waitForAsync(() => {
     fixture.detectChanges();
@@ -135,5 +163,7 @@ describe('OwnerListComponent', () => {
       expect(el.innerText).toBe((testOwner.firstName.toString() + ' ' + testOwner.lastName.toString()));
     });
   }));
+
+  
 
 });

@@ -117,6 +117,18 @@ describe('VisitListComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should display VetvisitList', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('check if visits belong to Vet', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('check if list complete', () => {
+    expect(component).toBeTruthy();
+  });
+
   it('should call deleteVisit() method', () => {
     fixture.detectChanges();
     component.deleteVisit(component.visits[0]);

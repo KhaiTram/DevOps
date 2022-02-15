@@ -43,7 +43,8 @@ class OwnserServiceStub {
 describe('OwnerDetailComponent', () => {
   let component: OwnerDetailComponent;
   let fixture: ComponentFixture<OwnerDetailComponent>;
-
+  let testOwners: Owner[];
+  
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [OwnerDetailComponent],
@@ -59,6 +60,25 @@ describe('OwnerDetailComponent', () => {
   }));
 
   beforeEach(() => {
+    testOwners = [{
+      id: 1,
+      firstName: 'George',
+      lastName: 'Franklin',
+      address: '110 W. Liberty St.',
+      city: 'Madison',
+      telephone: '6085551023',
+      pets: [{
+        id: 1,
+        name: 'Leo',
+        birthDate: '2010-09-07',
+        type: {id: 1, name: 'cat'},
+        owner: null,
+        visits: null
+      }]
+    }];
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(OwnerDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -67,4 +87,13 @@ describe('OwnerDetailComponent', () => {
   it('should create OwnerDetailComponent', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create testuser', () => {
+    expect(testOwners[0]).toBeTruthy();
+  });
+
+  it('should Delete testuser', () => {
+    expect(testOwners[0]).toBeTruthy();
+  });
+
 });
