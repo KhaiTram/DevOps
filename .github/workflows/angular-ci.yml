@@ -32,7 +32,10 @@ jobs:
           #dauert zu lange 
      # - name: Lint 🧐
       #  run: |
-       #   npm run lint   
+       #   npm run lint  
+       
+      - name: Test 🚨
+        run: ng test
 
       - name: Deploy to netlify 🚀
         uses: netlify/actions/cli@master
