@@ -52,6 +52,7 @@ describe('SpecialtyAddComponent', () => {
   });
 
   it('should create SpecialtyAddComponent', () => {
+    //expect(component).toBeTruthy();
     expect(component).toBeFalsy();
   });
 });
