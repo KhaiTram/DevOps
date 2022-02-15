@@ -34,8 +34,8 @@ jobs:
       #  run: |
        #   npm run lint  
        
-   #   - name: Test 🚨
-        #run: ng test
+      - name: Test 🚨
+        run: ng test
 
       - name: Deploy to netlify 🚀
         uses: netlify/actions/cli@master
